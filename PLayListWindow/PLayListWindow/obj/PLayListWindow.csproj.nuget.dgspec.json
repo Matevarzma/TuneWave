@@ -11,7 +11,7 @@
         "projectName": "PlayListWindow",
         "projectPath": "C:\\Users\\MARI\\Desktop\\TuneWave\\PLayListWindow\\PlayListWindow\\PlayListWindow.csproj",
         "packagesPath": "C:\\Users\\MARI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MARI\\Desktop\\TuneWave\\PlayListWindow\\PlayListWindow\\obj\\",
+        "outputPath": "C:\\Users\\MARI\\Desktop\\TuneWave\\PLayListWindow\\PlayListWindow\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MARI\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "Bunifu.UI.WinForms": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
