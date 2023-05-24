@@ -1,4 +1,4 @@
-namespace PLayListWindow
+namespace PlayListWindow
 {
     internal static class Program
     {

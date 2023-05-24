@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MARI\\Desktop\\TuneWave\\PLayListWindow\\PLayListWindow\\PLayListWindow.csproj": {}
+    "C:\\Users\\MARI\\Desktop\\TuneWave\\PLayListWindow\\PlayListWindow\\PlayListWindow.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MARI\\Desktop\\TuneWave\\PLayListWindow\\PLayListWindow\\PLayListWindow.csproj": {
+    "C:\\Users\\MARI\\Desktop\\TuneWave\\PLayListWindow\\PlayListWindow\\PlayListWindow.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MARI\\Desktop\\TuneWave\\PLayListWindow\\PLayListWindow\\PLayListWindow.csproj",
-        "projectName": "PLayListWindow",
-        "projectPath": "C:\\Users\\MARI\\Desktop\\TuneWave\\PLayListWindow\\PLayListWindow\\PLayListWindow.csproj",
+        "projectUniqueName": "C:\\Users\\MARI\\Desktop\\TuneWave\\PLayListWindow\\PlayListWindow\\PlayListWindow.csproj",
+        "projectName": "PlayListWindow",
+        "projectPath": "C:\\Users\\MARI\\Desktop\\TuneWave\\PLayListWindow\\PlayListWindow\\PlayListWindow.csproj",
         "packagesPath": "C:\\Users\\MARI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MARI\\Desktop\\TuneWave\\PLayListWindow\\PLayListWindow\\obj\\",
+        "outputPath": "C:\\Users\\MARI\\Desktop\\TuneWave\\PlayListWindow\\PlayListWindow\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MARI\\AppData\\Roaming\\NuGet\\NuGet.Config",

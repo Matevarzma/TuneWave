@@ -1,4 +1,4 @@
-namespace PLayListWindow
+namespace PlayListWindow
 {
     public partial class Form1 : Form
     {

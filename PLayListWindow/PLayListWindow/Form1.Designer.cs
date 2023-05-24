@@ -1,4 +1,4 @@
-﻿namespace PLayListWindow
+﻿namespace PlayListWindow
 {
     partial class Form1
     {
