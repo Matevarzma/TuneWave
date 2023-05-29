@@ -1,3 +1,5 @@
+using MaterialSkin.Controls;
+
 namespace PlayListWindow
 {
     internal static class Program
@@ -13,5 +15,8 @@ namespace PlayListWindow
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
         }
+
+ 
+
     }
 }

@@ -8,7 +8,10 @@
     ".NETCoreApp,Version=v6.0": {
       "PlayListWindow/1.0.0": {
         "dependencies": {
-          "Bunifu.UI.WinForms": "6.1.0"
+          "Bunifu.UI.WinForms": "6.1.0",
+          "Guna.UI2.WinForms": "2.0.4.4",
+          "MaterialSkin": "0.2.1",
+          "Syncfusion.Xamarin.Core": "21.2.6"
         },
         "runtime": {
           "PlayListWindow.dll": {}
@@ -68,6 +71,25 @@
         }
       },
       "Fody/4.0.2": {},
+      "Guna.UI2.WinForms/2.0.4.4": {
+        "dependencies": {
+          "System.Management": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Guna.UI2.dll": {
+            "assemblyVersion": "2.0.4.4",
+            "fileVersion": "2.0.4.4"
+          }
+        }
+      },
+      "MaterialSkin/0.2.1": {
+        "runtime": {
+          "lib/MaterialSkin.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/5.0.0": {
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
@@ -231,6 +253,26 @@
             "rid": "win-x86",
             "assetType": "native",
             "fileVersion": "4.6.25512.1"
+          }
+        }
+      },
+      "Syncfusion.Licensing/21.2.6": {
+        "runtime": {
+          "lib/net6.0-windows7.0/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "21.2.6.0",
+            "fileVersion": "21.2.6.0"
+          }
+        }
+      },
+      "Syncfusion.Xamarin.Core/21.2.6": {
+        "dependencies": {
+          "Syncfusion.Licensing": "21.2.6",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Core.XForms.dll": {
+            "assemblyVersion": "21.2.6.0",
+            "fileVersion": "21.2.6.0"
           }
         }
       },
@@ -761,6 +803,22 @@
         "dependencies": {
           "System.Drawing.Common": "6.0.0"
         }
+      },
+      "Xamarin.Forms/5.0.0.2012": {
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "5.0.0.671"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "5.0.0.671"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "5.0.0.671"
+          }
+        }
       }
     }
   },
@@ -804,6 +862,20 @@
       "sha512": "sha512-vY77397mlY3qP1+i3G/MsWMmwS2j+WOzEj9JrZvINZLkjBF+KvIFypv3Ro8eBH87Awx4tFdEYWBOL1HYO2gh4g==",
       "path": "fody/4.0.2",
       "hashPath": "fody.4.0.2.nupkg.sha512"
+    },
+    "Guna.UI2.WinForms/2.0.4.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PAteiG4zIquxHEhRJR4q69d0+U97U4XZuiwCFueXkh8hsw7IpkgPL41A/iyIx6bRFWiyEZ8tBzWqRrq7blrfnA==",
+      "path": "guna.ui2.winforms/2.0.4.4",
+      "hashPath": "guna.ui2.winforms.2.0.4.4.nupkg.sha512"
+    },
+    "MaterialSkin/0.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/6AEh6qIeNKbxsha7IHBb5s50tyvB0iZuGQPB9mjyR+mRdfQ7vnKTklwI26Y/DbrymTcg+aBHSgCgAT7/qLIrQ==",
+      "path": "materialskin/0.2.1",
+      "hashPath": "materialskin.0.2.1.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/5.0.0": {
       "type": "package",
@@ -937,6 +1009,20 @@
       "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "Syncfusion.Licensing/21.2.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1HbmjYmpI+KsaDYIEeqLuqVECL8hM6+T6Hem6rkCoYLoljUx+6X1oKxJs0qhsPo0bCtng1le8GG6j0HQF6B/mg==",
+      "path": "syncfusion.licensing/21.2.6",
+      "hashPath": "syncfusion.licensing.21.2.6.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.Core/21.2.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uWVfY+ReK5TrkV0s7hvBdGenqcvxSEQGdyuc8/IKDgdGo8wHTQN09Vd/cdUb21q5UnFTGHPL1K7XGzXOUhT57Q==",
+      "path": "syncfusion.xamarin.core/21.2.6",
+      "hashPath": "syncfusion.xamarin.core.21.2.6.nupkg.sha512"
     },
     "System.CodeDom/6.0.0": {
       "type": "package",
@@ -1224,6 +1310,13 @@
       "sha512": "sha512-IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
+    },
+    "Xamarin.Forms/5.0.0.2012": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rqc6xvWR/sf+Db5+qRCFmuYTWVp04QWRfwPto2/JHbShSy4Ed53Q2jpoFzsoloXkJA6saD236PlaWAhT6vI4gw==",
+      "path": "xamarin.forms/5.0.0.2012",
+      "hashPath": "xamarin.forms.5.0.0.2012.nupkg.sha512"
     }
   }
 }

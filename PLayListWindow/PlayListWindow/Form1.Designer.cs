@@ -1,4 +1,6 @@
-﻿namespace PlayListWindow
+﻿
+
+namespace PlayListWindow
 {
     partial class Form1
     {
@@ -29,32 +31,41 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
             MainPanel = new Panel();
             HelpButton = new Bunifu.Framework.UI.BunifuFlatButton();
             SettingsButton = new Bunifu.Framework.UI.BunifuFlatButton();
             PLayListsButton = new Bunifu.Framework.UI.BunifuFlatButton();
             ExploreButton = new Bunifu.Framework.UI.BunifuFlatButton();
             AlbumsButton = new Bunifu.Framework.UI.BunifuFlatButton();
-            bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            PLayingButton = new Bunifu.Framework.UI.BunifuFlatButton();
             PremiumLabel = new Label();
             UserLabel = new Label();
             PFPpic = new PictureBox();
+            bunifuPages1 = new Bunifu.UI.WinForms.BunifuPages();
+            tabPage1 = new TabPage();
+            tabPage2 = new TabPage();
+            indicator = new Bunifu.UI.WinForms.BunifuShapes();
+            bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             MainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PFPpic).BeginInit();
+            bunifuPages1.SuspendLayout();
             SuspendLayout();
             // 
             // MainPanel
             // 
             MainPanel.BackColor = Color.LightCyan;
+            MainPanel.Controls.Add(indicator);
             MainPanel.Controls.Add(HelpButton);
             MainPanel.Controls.Add(SettingsButton);
             MainPanel.Controls.Add(PLayListsButton);
             MainPanel.Controls.Add(ExploreButton);
             MainPanel.Controls.Add(AlbumsButton);
-            MainPanel.Controls.Add(bunifuFlatButton1);
+            MainPanel.Controls.Add(PLayingButton);
             MainPanel.Controls.Add(PremiumLabel);
             MainPanel.Controls.Add(UserLabel);
             MainPanel.Controls.Add(PFPpic);
+            MainPanel.Controls.Add(bunifuShapes1);
             MainPanel.Dock = DockStyle.Left;
             MainPanel.Location = new Point(0, 0);
             MainPanel.Name = "MainPanel";
@@ -212,6 +223,7 @@
             ExploreButton.TextAlign = ContentAlignment.MiddleLeft;
             ExploreButton.Textcolor = SystemColors.ControlDarkDark;
             ExploreButton.TextFont = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            ExploreButton.Click += ExploreButton_Click;
             // 
             // AlbumsButton
             // 
@@ -251,43 +263,44 @@
             AlbumsButton.Textcolor = SystemColors.ControlDarkDark;
             AlbumsButton.TextFont = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             // 
-            // bunifuFlatButton1
+            // PLayingButton
             // 
-            bunifuFlatButton1.Active = false;
-            bunifuFlatButton1.Activecolor = Color.LightCyan;
-            bunifuFlatButton1.BackColor = Color.LightCyan;
-            bunifuFlatButton1.BackgroundImageLayout = ImageLayout.Stretch;
-            bunifuFlatButton1.BorderRadius = 0;
-            bunifuFlatButton1.ButtonText = "No Playing..";
-            bunifuFlatButton1.Cursor = Cursors.Hand;
-            bunifuFlatButton1.DisabledColor = Color.Gray;
-            bunifuFlatButton1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            bunifuFlatButton1.ForeColor = SystemColors.ActiveCaptionText;
-            bunifuFlatButton1.Iconcolor = Color.Transparent;
-            bunifuFlatButton1.Iconimage = null;
-            bunifuFlatButton1.Iconimage_right = null;
-            bunifuFlatButton1.Iconimage_right_Selected = null;
-            bunifuFlatButton1.Iconimage_Selected = null;
-            bunifuFlatButton1.IconMarginLeft = 0;
-            bunifuFlatButton1.IconMarginRight = 0;
-            bunifuFlatButton1.IconRightVisible = true;
-            bunifuFlatButton1.IconRightZoom = 0D;
-            bunifuFlatButton1.IconVisible = true;
-            bunifuFlatButton1.IconZoom = 90D;
-            bunifuFlatButton1.IsTab = false;
-            bunifuFlatButton1.Location = new Point(50, 136);
-            bunifuFlatButton1.Margin = new Padding(5, 3, 5, 3);
-            bunifuFlatButton1.Name = "bunifuFlatButton1";
-            bunifuFlatButton1.Normalcolor = Color.LightCyan;
-            bunifuFlatButton1.OnHovercolor = Color.LightCyan;
-            bunifuFlatButton1.OnHoverTextColor = Color.Black;
-            bunifuFlatButton1.selected = false;
-            bunifuFlatButton1.Size = new Size(125, 41);
-            bunifuFlatButton1.TabIndex = 5;
-            bunifuFlatButton1.Text = "No Playing..";
-            bunifuFlatButton1.TextAlign = ContentAlignment.MiddleLeft;
-            bunifuFlatButton1.Textcolor = SystemColors.ControlDarkDark;
-            bunifuFlatButton1.TextFont = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            PLayingButton.Active = false;
+            PLayingButton.Activecolor = Color.LightCyan;
+            PLayingButton.BackColor = Color.LightCyan;
+            PLayingButton.BackgroundImageLayout = ImageLayout.Stretch;
+            PLayingButton.BorderRadius = 0;
+            PLayingButton.ButtonText = "No Playing..";
+            PLayingButton.Cursor = Cursors.Hand;
+            PLayingButton.DisabledColor = Color.Gray;
+            PLayingButton.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            PLayingButton.ForeColor = SystemColors.ActiveCaptionText;
+            PLayingButton.Iconcolor = Color.Transparent;
+            PLayingButton.Iconimage = null;
+            PLayingButton.Iconimage_right = null;
+            PLayingButton.Iconimage_right_Selected = null;
+            PLayingButton.Iconimage_Selected = null;
+            PLayingButton.IconMarginLeft = 0;
+            PLayingButton.IconMarginRight = 0;
+            PLayingButton.IconRightVisible = true;
+            PLayingButton.IconRightZoom = 0D;
+            PLayingButton.IconVisible = true;
+            PLayingButton.IconZoom = 90D;
+            PLayingButton.IsTab = false;
+            PLayingButton.Location = new Point(50, 136);
+            PLayingButton.Margin = new Padding(5, 3, 5, 3);
+            PLayingButton.Name = "PLayingButton";
+            PLayingButton.Normalcolor = Color.LightCyan;
+            PLayingButton.OnHovercolor = Color.LightCyan;
+            PLayingButton.OnHoverTextColor = Color.Black;
+            PLayingButton.selected = false;
+            PLayingButton.Size = new Size(125, 41);
+            PLayingButton.TabIndex = 5;
+            PLayingButton.Text = "No Playing..";
+            PLayingButton.TextAlign = ContentAlignment.MiddleLeft;
+            PLayingButton.Textcolor = SystemColors.ControlDarkDark;
+            PLayingButton.TextFont = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            PLayingButton.Click += PLayingButton_Click;
             // 
             // PremiumLabel
             // 
@@ -323,12 +336,100 @@
             PFPpic.TabIndex = 0;
             PFPpic.TabStop = false;
             // 
+            // bunifuPages1
+            // 
+            bunifuPages1.Alignment = TabAlignment.Bottom;
+            bunifuPages1.AllowTransitions = false;
+            bunifuPages1.Controls.Add(tabPage1);
+            bunifuPages1.Controls.Add(tabPage2);
+            bunifuPages1.Dock = DockStyle.Fill;
+            bunifuPages1.Location = new Point(224, 0);
+            bunifuPages1.Multiline = true;
+            bunifuPages1.Name = "bunifuPages1";
+            bunifuPages1.Page = tabPage1;
+            bunifuPages1.PageIndex = 0;
+            bunifuPages1.PageName = "tabPage1";
+            bunifuPages1.PageTitle = "Playing";
+            bunifuPages1.SelectedIndex = 0;
+            bunifuPages1.Size = new Size(884, 667);
+            bunifuPages1.TabIndex = 1;
+            animation1.AnimateOnlyDifferences = false;
+            animation1.BlindCoeff = (PointF)resources.GetObject("animation1.BlindCoeff");
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = (PointF)resources.GetObject("animation1.MosaicCoeff");
+            animation1.MosaicShift = (PointF)resources.GetObject("animation1.MosaicShift");
+            animation1.MosaicSize = 0;
+            animation1.Padding = new Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = (PointF)resources.GetObject("animation1.ScaleCoeff");
+            animation1.SlideCoeff = (PointF)resources.GetObject("animation1.SlideCoeff");
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            bunifuPages1.Transition = animation1;
+            bunifuPages1.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
+            // 
+            // tabPage1
+            // 
+            tabPage1.Location = new Point(4, 4);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(876, 639);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "Playing";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            tabPage2.Location = new Point(4, 4);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(876, 639);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Explore";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // indicator
+            // 
+            indicator.Angle = 0F;
+            indicator.BackColor = Color.Transparent;
+            indicator.BorderColor = Color.LightSeaGreen;
+            indicator.BorderThickness = 3;
+            indicator.FillColor = Color.Transparent;
+            indicator.FillShape = true;
+            indicator.Location = new Point(24, 147);
+            indicator.Name = "indicator";
+            indicator.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Circle;
+            indicator.Sides = 5;
+            indicator.Size = new Size(18, 18);
+            indicator.TabIndex = 2;
+            indicator.Text = "bunifuShapes1";
+            // 
+            // bunifuShapes1
+            // 
+            bunifuShapes1.Angle = 90F;
+            bunifuShapes1.BackColor = Color.Transparent;
+            bunifuShapes1.BorderColor = Color.LightSeaGreen;
+            bunifuShapes1.BorderThickness = 2;
+            bunifuShapes1.FillColor = Color.Transparent;
+            bunifuShapes1.FillShape = true;
+            bunifuShapes1.Location = new Point(-54, 151);
+            bunifuShapes1.Name = "bunifuShapes1";
+            bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Line;
+            bunifuShapes1.Sides = 5;
+            bunifuShapes1.Size = new Size(172, 151);
+            bunifuShapes1.TabIndex = 0;
+            bunifuShapes1.Text = "bunifuShapes1";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(1108, 667);
+            Controls.Add(bunifuPages1);
             Controls.Add(MainPanel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
@@ -337,6 +438,7 @@
             MainPanel.ResumeLayout(false);
             MainPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)PFPpic).EndInit();
+            bunifuPages1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -346,11 +448,18 @@
         private PictureBox PFPpic;
         private Label UserLabel;
         private Label PremiumLabel;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton PLayingButton;
         private Bunifu.Framework.UI.BunifuFlatButton PLayListsButton;
         private Bunifu.Framework.UI.BunifuFlatButton ExploreButton;
         private Bunifu.Framework.UI.BunifuFlatButton AlbumsButton;
         private Bunifu.Framework.UI.BunifuFlatButton SettingsButton;
         private Bunifu.Framework.UI.BunifuFlatButton HelpButton;
+        private Guna.UI2.WinForms.Guna2Shapes guna2Shapes1;
+        private Guna.UI2.WinForms.Guna2Shapes guna2Shapes2;
+        private Bunifu.UI.WinForms.BunifuPages bunifuPages1;
+        private TabPage tabPage1;
+        private TabPage tabPage2;
+        private Bunifu.UI.WinForms.BunifuShapes indicator;
+        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
     }
 }

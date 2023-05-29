@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/0UHpRD0NakKUW1jgN4+m8EzsOG56JqOgYyDlZETr0MyUxTfoI0OBtEnF6ls122KMSVWLF3b4s5wTRZ1n+Pq4g==",
+  "dgSpecHash": "fGp1shVuJ8pYXMYjexeXD2H8TxCWglrIFnL0zHeSMklkCjlBTesgVHx4v7WRNA5F8qRGTScYWpE1evghdxvbLg==",
   "success": true,
   "projectFilePath": "C:\\Users\\MARI\\Desktop\\TuneWave\\PLayListWindow\\PlayListWindow\\PlayListWindow.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,8 @@
     "C:\\Users\\MARI\\.nuget\\packages\\bunifu.ui.winforms.1.5.3\\1.0.0\\bunifu.ui.winforms.1.5.3.1.0.0.nupkg.sha512",
     "C:\\Users\\MARI\\.nuget\\packages\\costura.fody\\3.3.3\\costura.fody.3.3.3.nupkg.sha512",
     "C:\\Users\\MARI\\.nuget\\packages\\fody\\4.0.2\\fody.4.0.2.nupkg.sha512",
+    "C:\\Users\\MARI\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.4\\guna.ui2.winforms.2.0.4.4.nupkg.sha512",
+    "C:\\Users\\MARI\\.nuget\\packages\\materialskin\\0.2.1\\materialskin.0.2.1.nupkg.sha512",
     "C:\\Users\\MARI\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
     "C:\\Users\\MARI\\.nuget\\packages\\microsoft.extensions.objectpool\\5.0.10\\microsoft.extensions.objectpool.5.0.10.nupkg.sha512",
     "C:\\Users\\MARI\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
@@ -28,6 +30,8 @@
     "C:\\Users\\MARI\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\MARI\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\MARI\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\MARI\\.nuget\\packages\\syncfusion.licensing\\21.2.6\\syncfusion.licensing.21.2.6.nupkg.sha512",
+    "C:\\Users\\MARI\\.nuget\\packages\\syncfusion.xamarin.core\\21.2.6\\syncfusion.xamarin.core.21.2.6.nupkg.sha512",
     "C:\\Users\\MARI\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
     "C:\\Users\\MARI\\.nuget\\packages\\system.componentmodel.composition\\6.0.0\\system.componentmodel.composition.6.0.0.nupkg.sha512",
     "C:\\Users\\MARI\\.nuget\\packages\\system.componentmodel.composition.registration\\6.0.0\\system.componentmodel.composition.registration.6.0.0.nupkg.sha512",
@@ -68,7 +72,8 @@
     "C:\\Users\\MARI\\.nuget\\packages\\system.text.encoding.codepages\\6.0.0\\system.text.encoding.codepages.6.0.0.nupkg.sha512",
     "C:\\Users\\MARI\\.nuget\\packages\\system.threading.accesscontrol\\6.0.0\\system.threading.accesscontrol.6.0.0.nupkg.sha512",
     "C:\\Users\\MARI\\.nuget\\packages\\system.web.services.description\\4.9.0\\system.web.services.description.4.9.0.nupkg.sha512",
-    "C:\\Users\\MARI\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+    "C:\\Users\\MARI\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
+    "C:\\Users\\MARI\\.nuget\\packages\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
   ],
   "logs": [
     {
@@ -77,6 +82,16 @@
       "warningLevel": 1,
       "message": "Package 'Bunifu.UI.WinForms 6.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
       "libraryId": "Bunifu.UI.WinForms",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MaterialSkin 0.2.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "MaterialSkin",
       "targetGraphs": [
         "net6.0-windows7.0"
       ]

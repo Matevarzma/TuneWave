@@ -43,6 +43,18 @@
             "Bunifu.UI.WinForms": {
               "target": "Package",
               "version": "[6.1.0, )"
+            },
+            "Guna.UI2.WinForms": {
+              "target": "Package",
+              "version": "[2.0.4.4, )"
+            },
+            "MaterialSkin": {
+              "target": "Package",
+              "version": "[0.2.1, )"
+            },
+            "Syncfusion.Xamarin.Core": {
+              "target": "Package",
+              "version": "[21.2.6, )"
             }
           },
           "imports": [
