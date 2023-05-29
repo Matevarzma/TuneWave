@@ -11,13 +11,13 @@ public partial class Form1 : Form
 
     private void PLayingButton_Click(object sender, EventArgs e)
     {
-        // indicator.Top = PLayingButton.Top;
+        indicator.Top = PLayingButton.Top;
         bunifuPages1.SetPage(0);
     }
 
     private void ExploreButton_Click(object sender, EventArgs e)
     {
-        //indicator.Top = ExploreButton.Top;
+        indicator.Top = ExploreButton.Top;
         bunifuPages1.SetPage(0);
     }
 }
