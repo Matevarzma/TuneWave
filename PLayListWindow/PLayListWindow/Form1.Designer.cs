@@ -51,6 +51,9 @@ namespace PlayListWindow
             ExitBtn = new Bunifu.UI.WinForms.BunifuImageButton();
             bunifuPages1 = new Bunifu.UI.WinForms.BunifuPages();
             tabPage2 = new TabPage();
+            bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            pictureBox3 = new PictureBox();
+            label2 = new Label();
             tabPage1 = new TabPage();
             panel1 = new Panel();
             pictureBox2 = new PictureBox();
@@ -65,6 +68,9 @@ namespace PlayListWindow
             ((System.ComponentModel.ISupportInitialize)PFPpic).BeginInit();
             PnlHeadbar.SuspendLayout();
             bunifuPages1.SuspendLayout();
+            tabPage2.SuspendLayout();
+            bunifuPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -390,7 +396,7 @@ namespace PlayListWindow
             // 
             bunifuFormDock1.AllowFormDragging = true;
             bunifuFormDock1.AllowFormDropShadow = true;
-            bunifuFormDock1.AllowFormResizing = true;
+            bunifuFormDock1.AllowFormResizing = false;
             bunifuFormDock1.AllowHidingBottomRegion = true;
             bunifuFormDock1.AllowOpacityChangesWhileDragging = false;
             bunifuFormDock1.BorderOptions.BottomBorder.BorderColor = Color.Silver;
@@ -419,10 +425,10 @@ namespace PlayListWindow
             bunifuFormDock1.FormDraggingOpacity = 0.9D;
             bunifuFormDock1.ParentForm = this;
             bunifuFormDock1.ShowCursorChanges = true;
-            bunifuFormDock1.ShowDockingIndicators = true;
+            bunifuFormDock1.ShowDockingIndicators = false;
             bunifuFormDock1.TitleBarOptions.AllowFormDragging = true;
             bunifuFormDock1.TitleBarOptions.BunifuFormDock = bunifuFormDock1;
-            bunifuFormDock1.TitleBarOptions.DoubleClickToExpandWindow = true;
+            bunifuFormDock1.TitleBarOptions.DoubleClickToExpandWindow = false;
             bunifuFormDock1.TitleBarOptions.TitleBarControl = PnlHeadbar;
             bunifuFormDock1.TitleBarOptions.UseBackColorOnDockingIndicators = true;
             // 
@@ -440,7 +446,7 @@ namespace PlayListWindow
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(40, 10);
+            label1.Location = new Point(15, 10);
             label1.Name = "label1";
             label1.Size = new Size(202, 30);
             label1.TabIndex = 2;
@@ -522,6 +528,8 @@ namespace PlayListWindow
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(bunifuPanel1);
+            tabPage2.Controls.Add(label2);
             tabPage2.Location = new Point(4, 4);
             tabPage2.Margin = new Padding(3, 2, 3, 2);
             tabPage2.Name = "tabPage2";
@@ -530,6 +538,41 @@ namespace PlayListWindow
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Explore";
             tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // bunifuPanel1
+            // 
+            bunifuPanel1.BackgroundColor = Color.White;
+            bunifuPanel1.BackgroundImage = (Image)resources.GetObject("bunifuPanel1.BackgroundImage");
+            bunifuPanel1.BackgroundImageLayout = ImageLayout.Stretch;
+            bunifuPanel1.BorderColor = Color.White;
+            bunifuPanel1.BorderRadius = 0;
+            bunifuPanel1.BorderThickness = 0;
+            bunifuPanel1.Controls.Add(pictureBox3);
+            bunifuPanel1.Location = new Point(25, 122);
+            bunifuPanel1.Name = "bunifuPanel1";
+            bunifuPanel1.ShowBorders = false;
+            bunifuPanel1.Size = new Size(273, 132);
+            bunifuPanel1.TabIndex = 4;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(23, 0);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(234, 134);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 0;
+            pictureBox3.TabStop = false;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(304, 122);
+            label2.Name = "label2";
+            label2.Size = new Size(202, 30);
+            label2.TabIndex = 3;
+            label2.Text = "Song Title -Playing";
             // 
             // tabPage1
             // 
@@ -835,6 +878,10 @@ namespace PlayListWindow
             PnlHeadbar.ResumeLayout(false);
             PnlHeadbar.PerformLayout();
             bunifuPages1.ResumeLayout(false);
+            tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
+            bunifuPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -873,5 +920,8 @@ namespace PlayListWindow
         private PictureBox pictureBox1;
         private Bunifu.UI.WinForms.BunifuHSlider bunifuhSlider2;
         private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private Label label2;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
     }
 }
