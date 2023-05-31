@@ -47,22 +47,27 @@ namespace PlayListWindow
             bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
             PnlHeadbar = new Panel();
+            label1 = new Label();
             ExitBtn = new Bunifu.UI.WinForms.BunifuImageButton();
             bunifuPages1 = new Bunifu.UI.WinForms.BunifuPages();
             tabPage2 = new TabPage();
             tabPage1 = new TabPage();
             panel1 = new Panel();
-            bunifuhSlider1 = new Bunifu.UI.WinForms.BunifuHSlider();
-            label1 = new Label();
-            bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
-            bunifuImageButton2 = new Bunifu.UI.WinForms.BunifuImageButton();
-            bunifuImageButton3 = new Bunifu.UI.WinForms.BunifuImageButton();
+            pictureBox2 = new PictureBox();
+            pictureBox1 = new PictureBox();
+            bunifuhSlider2 = new Bunifu.UI.WinForms.BunifuHSlider();
             bunifuImageButton4 = new Bunifu.UI.WinForms.BunifuImageButton();
+            bunifuImageButton3 = new Bunifu.UI.WinForms.BunifuImageButton();
+            bunifuImageButton2 = new Bunifu.UI.WinForms.BunifuImageButton();
+            bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
+            bunifuhSlider1 = new Bunifu.UI.WinForms.BunifuHSlider();
             PnlleftBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PFPpic).BeginInit();
             PnlHeadbar.SuspendLayout();
             bunifuPages1.SuspendLayout();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // PnlleftBar
@@ -82,7 +87,7 @@ namespace PlayListWindow
             PnlleftBar.Dock = DockStyle.Left;
             PnlleftBar.Location = new Point(0, 0);
             PnlleftBar.Name = "PnlleftBar";
-            PnlleftBar.Size = new Size(224, 643);
+            PnlleftBar.Size = new Size(181, 643);
             PnlleftBar.TabIndex = 0;
             // 
             // indicator
@@ -426,10 +431,20 @@ namespace PlayListWindow
             PnlHeadbar.Controls.Add(label1);
             PnlHeadbar.Controls.Add(ExitBtn);
             PnlHeadbar.Dock = DockStyle.Top;
-            PnlHeadbar.Location = new Point(224, 0);
+            PnlHeadbar.Location = new Point(181, 0);
             PnlHeadbar.Name = "PnlHeadbar";
-            PnlHeadbar.Size = new Size(884, 53);
+            PnlHeadbar.Size = new Size(927, 53);
             PnlHeadbar.TabIndex = 2;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(40, 10);
+            label1.Name = "label1";
+            label1.Size = new Size(202, 30);
+            label1.TabIndex = 2;
+            label1.Text = "Song Title -Playing";
             // 
             // ExitBtn
             // 
@@ -439,6 +454,7 @@ namespace PlayListWindow
             ExitBtn.AllowToggling = false;
             ExitBtn.AllowZooming = true;
             ExitBtn.AllowZoomingOnFocus = false;
+            ExitBtn.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             ExitBtn.BackColor = Color.Transparent;
             ExitBtn.BackgroundImage = (Image)resources.GetObject("ExitBtn.BackgroundImage");
             ExitBtn.BackgroundImageLayout = ImageLayout.Center;
@@ -453,7 +469,7 @@ namespace PlayListWindow
             ExitBtn.ImageSize = new Size(20, 20);
             ExitBtn.ImageZoomSize = new Size(40, 40);
             ExitBtn.InitialImage = (Image)resources.GetObject("ExitBtn.InitialImage");
-            ExitBtn.Location = new Point(831, 5);
+            ExitBtn.Location = new Point(880, 5);
             ExitBtn.Name = "ExitBtn";
             ExitBtn.Rotation = 0;
             ExitBtn.ShowActiveImage = true;
@@ -475,7 +491,7 @@ namespace PlayListWindow
             bunifuPages1.Controls.Add(tabPage2);
             bunifuPages1.Controls.Add(tabPage1);
             bunifuPages1.Dock = DockStyle.Fill;
-            bunifuPages1.Location = new Point(224, 0);
+            bunifuPages1.Location = new Point(181, 0);
             bunifuPages1.Margin = new Padding(3, 2, 3, 2);
             bunifuPages1.Multiline = true;
             bunifuPages1.Name = "bunifuPages1";
@@ -484,7 +500,7 @@ namespace PlayListWindow
             bunifuPages1.PageName = "tabPage2";
             bunifuPages1.PageTitle = "Explore";
             bunifuPages1.SelectedIndex = 0;
-            bunifuPages1.Size = new Size(884, 589);
+            bunifuPages1.Size = new Size(927, 589);
             bunifuPages1.TabIndex = 1;
             animation1.AnimateOnlyDifferences = false;
             animation1.BlindCoeff = (PointF)resources.GetObject("animation1.BlindCoeff");
@@ -510,7 +526,7 @@ namespace PlayListWindow
             tabPage2.Margin = new Padding(3, 2, 3, 2);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3, 2, 3, 2);
-            tabPage2.Size = new Size(876, 561);
+            tabPage2.Size = new Size(919, 561);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Explore";
             tabPage2.UseVisualStyleBackColor = true;
@@ -521,7 +537,7 @@ namespace PlayListWindow
             tabPage1.Margin = new Padding(3, 2, 3, 2);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3, 2, 3, 2);
-            tabPage1.Size = new Size(876, 581);
+            tabPage1.Size = new Size(919, 561);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Playing";
             tabPage1.UseVisualStyleBackColor = true;
@@ -529,181 +545,84 @@ namespace PlayListWindow
             // panel1
             // 
             panel1.BackColor = Color.LightSeaGreen;
+            panel1.Controls.Add(pictureBox2);
+            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(bunifuhSlider2);
             panel1.Controls.Add(bunifuImageButton4);
             panel1.Controls.Add(bunifuImageButton3);
             panel1.Controls.Add(bunifuImageButton2);
             panel1.Controls.Add(bunifuImageButton1);
             panel1.Controls.Add(bunifuhSlider1);
             panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(224, 589);
+            panel1.Location = new Point(181, 589);
             panel1.Name = "panel1";
-            panel1.Size = new Size(884, 54);
+            panel1.Size = new Size(927, 54);
             panel1.TabIndex = 3;
             // 
-            // bunifuhSlider1
+            // pictureBox2
             // 
-            bunifuhSlider1.AllowCursorChanges = true;
-            bunifuhSlider1.AllowHomeEndKeysDetection = false;
-            bunifuhSlider1.AllowIncrementalClickMoves = true;
-            bunifuhSlider1.AllowMouseDownEffects = false;
-            bunifuhSlider1.AllowMouseHoverEffects = false;
-            bunifuhSlider1.AllowScrollingAnimations = true;
-            bunifuhSlider1.AllowScrollKeysDetection = true;
-            bunifuhSlider1.AllowScrollOptionsMenu = true;
-            bunifuhSlider1.AllowShrinkingOnFocusLost = false;
-            bunifuhSlider1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            bunifuhSlider1.BackColor = Color.Transparent;
-            bunifuhSlider1.BackgroundImage = (Image)resources.GetObject("bunifuhSlider1.BackgroundImage");
-            bunifuhSlider1.BindingContainer = null;
-            bunifuhSlider1.BorderRadius = 2;
-            bunifuhSlider1.BorderThickness = 1;
-            bunifuhSlider1.DrawThickBorder = false;
-            bunifuhSlider1.DurationBeforeShrink = 2000;
-            bunifuhSlider1.ElapsedColor = Color.DodgerBlue;
-            bunifuhSlider1.LargeChange = 10;
-            bunifuhSlider1.Location = new Point(203, 15);
-            bunifuhSlider1.Maximum = 100;
-            bunifuhSlider1.Minimum = 0;
-            bunifuhSlider1.MinimumSize = new Size(0, 31);
-            bunifuhSlider1.MinimumThumbLength = 18;
-            bunifuhSlider1.Name = "bunifuhSlider1";
-            bunifuhSlider1.OnDisable.ScrollBarBorderColor = Color.Silver;
-            bunifuhSlider1.OnDisable.ScrollBarColor = Color.Transparent;
-            bunifuhSlider1.OnDisable.ThumbColor = Color.Silver;
-            bunifuhSlider1.ScrollBarBorderColor = Color.FromArgb(210, 232, 255);
-            bunifuhSlider1.ScrollBarColor = Color.FromArgb(210, 232, 255);
-            bunifuhSlider1.ShrinkSizeLimit = 3;
-            bunifuhSlider1.Size = new Size(490, 31);
-            bunifuhSlider1.SliderColor = Color.FromArgb(210, 232, 255);
-            bunifuhSlider1.SliderStyle = Bunifu.UI.WinForms.BunifuHSlider.SliderStyles.Thin;
-            bunifuhSlider1.SliderThumbStyle = Utilities.BunifuSlider.BunifuHScrollBar.SliderThumbStyles.Circular;
-            bunifuhSlider1.SmallChange = 1;
-            bunifuhSlider1.TabIndex = 0;
-            bunifuhSlider1.ThumbColor = Color.DodgerBlue;
-            bunifuhSlider1.ThumbFillColor = SystemColors.Control;
-            bunifuhSlider1.ThumbLength = 48;
-            bunifuhSlider1.ThumbMargin = 1;
-            bunifuhSlider1.ThumbSize = Bunifu.UI.WinForms.BunifuHSlider.ThumbSizes.Medium;
-            bunifuhSlider1.ThumbStyle = Bunifu.UI.WinForms.BunifuHSlider.ThumbStyles.Outline;
-            bunifuhSlider1.Value = 50;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(885, 19);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(30, 30);
+            pictureBox2.TabIndex = 8;
+            pictureBox2.TabStop = false;
             // 
-            // label1
+            // pictureBox1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(40, 10);
-            label1.Name = "label1";
-            label1.Size = new Size(202, 30);
-            label1.TabIndex = 2;
-            label1.Text = "Song Title -Playing";
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(677, 19);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(31, 31);
+            pictureBox1.TabIndex = 7;
+            pictureBox1.TabStop = false;
             // 
-            // bunifuImageButton1
+            // bunifuhSlider2
             // 
-            bunifuImageButton1.ActiveImage = null;
-            bunifuImageButton1.AllowAnimations = true;
-            bunifuImageButton1.AllowBuffering = false;
-            bunifuImageButton1.AllowToggling = false;
-            bunifuImageButton1.AllowZooming = true;
-            bunifuImageButton1.AllowZoomingOnFocus = false;
-            bunifuImageButton1.BackColor = Color.Transparent;
-            bunifuImageButton1.BackgroundImage = (Image)resources.GetObject("bunifuImageButton1.BackgroundImage");
-            bunifuImageButton1.BackgroundImageLayout = ImageLayout.Center;
-            bunifuImageButton1.DialogResult = DialogResult.None;
-            bunifuImageButton1.ErrorImage = (Image)resources.GetObject("bunifuImageButton1.ErrorImage");
-            bunifuImageButton1.FadeWhenInactive = false;
-            bunifuImageButton1.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            bunifuImageButton1.Image = (Image)resources.GetObject("bunifuImageButton1.Image");
-            bunifuImageButton1.ImageActive = null;
-            bunifuImageButton1.ImageLocation = null;
-            bunifuImageButton1.ImageMargin = 20;
-            bunifuImageButton1.ImageSize = new Size(20, 20);
-            bunifuImageButton1.ImageZoomSize = new Size(40, 40);
-            bunifuImageButton1.InitialImage = (Image)resources.GetObject("bunifuImageButton1.InitialImage");
-            bunifuImageButton1.Location = new Point(53, 8);
-            bunifuImageButton1.Name = "bunifuImageButton1";
-            bunifuImageButton1.Rotation = 0;
-            bunifuImageButton1.ShowActiveImage = true;
-            bunifuImageButton1.ShowCursorChanges = true;
-            bunifuImageButton1.ShowImageBorders = true;
-            bunifuImageButton1.ShowSizeMarkers = false;
-            bunifuImageButton1.Size = new Size(40, 40);
-            bunifuImageButton1.TabIndex = 2;
-            bunifuImageButton1.ToolTipText = "";
-            bunifuImageButton1.WaitOnLoad = false;
-            bunifuImageButton1.Zoom = 20;
-            bunifuImageButton1.ZoomSpeed = 10;
-            // 
-            // bunifuImageButton2
-            // 
-            bunifuImageButton2.ActiveImage = null;
-            bunifuImageButton2.AllowAnimations = true;
-            bunifuImageButton2.AllowBuffering = false;
-            bunifuImageButton2.AllowToggling = false;
-            bunifuImageButton2.AllowZooming = true;
-            bunifuImageButton2.AllowZoomingOnFocus = false;
-            bunifuImageButton2.BackColor = Color.Transparent;
-            bunifuImageButton2.BackgroundImage = (Image)resources.GetObject("bunifuImageButton2.BackgroundImage");
-            bunifuImageButton2.BackgroundImageLayout = ImageLayout.Center;
-            bunifuImageButton2.DialogResult = DialogResult.None;
-            bunifuImageButton2.ErrorImage = (Image)resources.GetObject("bunifuImageButton2.ErrorImage");
-            bunifuImageButton2.FadeWhenInactive = false;
-            bunifuImageButton2.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            bunifuImageButton2.Image = (Image)resources.GetObject("bunifuImageButton2.Image");
-            bunifuImageButton2.ImageActive = null;
-            bunifuImageButton2.ImageLocation = null;
-            bunifuImageButton2.ImageMargin = 20;
-            bunifuImageButton2.ImageSize = new Size(20, 20);
-            bunifuImageButton2.ImageZoomSize = new Size(40, 40);
-            bunifuImageButton2.InitialImage = (Image)resources.GetObject("bunifuImageButton2.InitialImage");
-            bunifuImageButton2.Location = new Point(7, 8);
-            bunifuImageButton2.Name = "bunifuImageButton2";
-            bunifuImageButton2.Rotation = 0;
-            bunifuImageButton2.ShowActiveImage = true;
-            bunifuImageButton2.ShowCursorChanges = true;
-            bunifuImageButton2.ShowImageBorders = true;
-            bunifuImageButton2.ShowSizeMarkers = false;
-            bunifuImageButton2.Size = new Size(40, 40);
-            bunifuImageButton2.TabIndex = 3;
-            bunifuImageButton2.ToolTipText = "";
-            bunifuImageButton2.WaitOnLoad = false;
-            bunifuImageButton2.Zoom = 20;
-            bunifuImageButton2.ZoomSpeed = 10;
-            // 
-            // bunifuImageButton3
-            // 
-            bunifuImageButton3.ActiveImage = null;
-            bunifuImageButton3.AllowAnimations = true;
-            bunifuImageButton3.AllowBuffering = false;
-            bunifuImageButton3.AllowToggling = false;
-            bunifuImageButton3.AllowZooming = true;
-            bunifuImageButton3.AllowZoomingOnFocus = false;
-            bunifuImageButton3.BackColor = Color.Transparent;
-            bunifuImageButton3.BackgroundImage = (Image)resources.GetObject("bunifuImageButton3.BackgroundImage");
-            bunifuImageButton3.BackgroundImageLayout = ImageLayout.Center;
-            bunifuImageButton3.DialogResult = DialogResult.None;
-            bunifuImageButton3.ErrorImage = (Image)resources.GetObject("bunifuImageButton3.ErrorImage");
-            bunifuImageButton3.FadeWhenInactive = false;
-            bunifuImageButton3.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            bunifuImageButton3.Image = (Image)resources.GetObject("bunifuImageButton3.Image");
-            bunifuImageButton3.ImageActive = null;
-            bunifuImageButton3.ImageLocation = null;
-            bunifuImageButton3.ImageMargin = 20;
-            bunifuImageButton3.ImageSize = new Size(20, 20);
-            bunifuImageButton3.ImageZoomSize = new Size(40, 40);
-            bunifuImageButton3.InitialImage = (Image)resources.GetObject("bunifuImageButton3.InitialImage");
-            bunifuImageButton3.Location = new Point(99, 8);
-            bunifuImageButton3.Name = "bunifuImageButton3";
-            bunifuImageButton3.Rotation = 0;
-            bunifuImageButton3.ShowActiveImage = true;
-            bunifuImageButton3.ShowCursorChanges = true;
-            bunifuImageButton3.ShowImageBorders = true;
-            bunifuImageButton3.ShowSizeMarkers = false;
-            bunifuImageButton3.Size = new Size(40, 40);
-            bunifuImageButton3.TabIndex = 4;
-            bunifuImageButton3.ToolTipText = "";
-            bunifuImageButton3.WaitOnLoad = false;
-            bunifuImageButton3.Zoom = 20;
-            bunifuImageButton3.ZoomSpeed = 10;
+            bunifuhSlider2.AllowCursorChanges = true;
+            bunifuhSlider2.AllowHomeEndKeysDetection = false;
+            bunifuhSlider2.AllowIncrementalClickMoves = true;
+            bunifuhSlider2.AllowMouseDownEffects = false;
+            bunifuhSlider2.AllowMouseHoverEffects = false;
+            bunifuhSlider2.AllowScrollingAnimations = true;
+            bunifuhSlider2.AllowScrollKeysDetection = true;
+            bunifuhSlider2.AllowScrollOptionsMenu = true;
+            bunifuhSlider2.AllowShrinkingOnFocusLost = false;
+            bunifuhSlider2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            bunifuhSlider2.BackColor = Color.Transparent;
+            bunifuhSlider2.BackgroundImage = (Image)resources.GetObject("bunifuhSlider2.BackgroundImage");
+            bunifuhSlider2.BindingContainer = null;
+            bunifuhSlider2.BorderRadius = 2;
+            bunifuhSlider2.BorderThickness = 1;
+            bunifuhSlider2.DrawThickBorder = false;
+            bunifuhSlider2.DurationBeforeShrink = 2000;
+            bunifuhSlider2.ElapsedColor = Color.DodgerBlue;
+            bunifuhSlider2.LargeChange = 10;
+            bunifuhSlider2.Location = new Point(725, 15);
+            bunifuhSlider2.Maximum = 100;
+            bunifuhSlider2.Minimum = 0;
+            bunifuhSlider2.MinimumSize = new Size(0, 31);
+            bunifuhSlider2.MinimumThumbLength = 18;
+            bunifuhSlider2.Name = "bunifuhSlider2";
+            bunifuhSlider2.OnDisable.ScrollBarBorderColor = Color.Silver;
+            bunifuhSlider2.OnDisable.ScrollBarColor = Color.Transparent;
+            bunifuhSlider2.OnDisable.ThumbColor = Color.Silver;
+            bunifuhSlider2.ScrollBarBorderColor = Color.FromArgb(210, 232, 255);
+            bunifuhSlider2.ScrollBarColor = Color.FromArgb(210, 232, 255);
+            bunifuhSlider2.ShrinkSizeLimit = 3;
+            bunifuhSlider2.Size = new Size(146, 31);
+            bunifuhSlider2.SliderColor = Color.FromArgb(210, 232, 255);
+            bunifuhSlider2.SliderStyle = Bunifu.UI.WinForms.BunifuHSlider.SliderStyles.Thin;
+            bunifuhSlider2.SliderThumbStyle = Utilities.BunifuSlider.BunifuHScrollBar.SliderThumbStyles.Circular;
+            bunifuhSlider2.SmallChange = 1;
+            bunifuhSlider2.TabIndex = 6;
+            bunifuhSlider2.ThumbColor = Color.DodgerBlue;
+            bunifuhSlider2.ThumbFillColor = SystemColors.Control;
+            bunifuhSlider2.ThumbLength = 18;
+            bunifuhSlider2.ThumbMargin = 1;
+            bunifuhSlider2.ThumbSize = Bunifu.UI.WinForms.BunifuHSlider.ThumbSizes.Medium;
+            bunifuhSlider2.ThumbStyle = Bunifu.UI.WinForms.BunifuHSlider.ThumbStyles.Outline;
+            bunifuhSlider2.Value = 50;
             // 
             // bunifuImageButton4
             // 
@@ -741,6 +660,161 @@ namespace PlayListWindow
             bunifuImageButton4.Zoom = 20;
             bunifuImageButton4.ZoomSpeed = 10;
             // 
+            // bunifuImageButton3
+            // 
+            bunifuImageButton3.ActiveImage = null;
+            bunifuImageButton3.AllowAnimations = true;
+            bunifuImageButton3.AllowBuffering = false;
+            bunifuImageButton3.AllowToggling = false;
+            bunifuImageButton3.AllowZooming = true;
+            bunifuImageButton3.AllowZoomingOnFocus = false;
+            bunifuImageButton3.BackColor = Color.Transparent;
+            bunifuImageButton3.BackgroundImage = (Image)resources.GetObject("bunifuImageButton3.BackgroundImage");
+            bunifuImageButton3.BackgroundImageLayout = ImageLayout.Center;
+            bunifuImageButton3.DialogResult = DialogResult.None;
+            bunifuImageButton3.ErrorImage = (Image)resources.GetObject("bunifuImageButton3.ErrorImage");
+            bunifuImageButton3.FadeWhenInactive = false;
+            bunifuImageButton3.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            bunifuImageButton3.Image = (Image)resources.GetObject("bunifuImageButton3.Image");
+            bunifuImageButton3.ImageActive = null;
+            bunifuImageButton3.ImageLocation = null;
+            bunifuImageButton3.ImageMargin = 20;
+            bunifuImageButton3.ImageSize = new Size(20, 20);
+            bunifuImageButton3.ImageZoomSize = new Size(40, 40);
+            bunifuImageButton3.InitialImage = (Image)resources.GetObject("bunifuImageButton3.InitialImage");
+            bunifuImageButton3.Location = new Point(99, 8);
+            bunifuImageButton3.Name = "bunifuImageButton3";
+            bunifuImageButton3.Rotation = 0;
+            bunifuImageButton3.ShowActiveImage = true;
+            bunifuImageButton3.ShowCursorChanges = true;
+            bunifuImageButton3.ShowImageBorders = true;
+            bunifuImageButton3.ShowSizeMarkers = false;
+            bunifuImageButton3.Size = new Size(40, 40);
+            bunifuImageButton3.TabIndex = 4;
+            bunifuImageButton3.ToolTipText = "";
+            bunifuImageButton3.WaitOnLoad = false;
+            bunifuImageButton3.Zoom = 20;
+            bunifuImageButton3.ZoomSpeed = 10;
+            // 
+            // bunifuImageButton2
+            // 
+            bunifuImageButton2.ActiveImage = null;
+            bunifuImageButton2.AllowAnimations = true;
+            bunifuImageButton2.AllowBuffering = false;
+            bunifuImageButton2.AllowToggling = false;
+            bunifuImageButton2.AllowZooming = true;
+            bunifuImageButton2.AllowZoomingOnFocus = false;
+            bunifuImageButton2.BackColor = Color.Transparent;
+            bunifuImageButton2.BackgroundImage = (Image)resources.GetObject("bunifuImageButton2.BackgroundImage");
+            bunifuImageButton2.BackgroundImageLayout = ImageLayout.Center;
+            bunifuImageButton2.DialogResult = DialogResult.None;
+            bunifuImageButton2.ErrorImage = (Image)resources.GetObject("bunifuImageButton2.ErrorImage");
+            bunifuImageButton2.FadeWhenInactive = false;
+            bunifuImageButton2.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            bunifuImageButton2.Image = (Image)resources.GetObject("bunifuImageButton2.Image");
+            bunifuImageButton2.ImageActive = null;
+            bunifuImageButton2.ImageLocation = null;
+            bunifuImageButton2.ImageMargin = 20;
+            bunifuImageButton2.ImageSize = new Size(20, 20);
+            bunifuImageButton2.ImageZoomSize = new Size(40, 40);
+            bunifuImageButton2.InitialImage = (Image)resources.GetObject("bunifuImageButton2.InitialImage");
+            bunifuImageButton2.Location = new Point(7, 8);
+            bunifuImageButton2.Name = "bunifuImageButton2";
+            bunifuImageButton2.Rotation = 0;
+            bunifuImageButton2.ShowActiveImage = true;
+            bunifuImageButton2.ShowCursorChanges = true;
+            bunifuImageButton2.ShowImageBorders = true;
+            bunifuImageButton2.ShowSizeMarkers = false;
+            bunifuImageButton2.Size = new Size(40, 40);
+            bunifuImageButton2.TabIndex = 3;
+            bunifuImageButton2.ToolTipText = "";
+            bunifuImageButton2.WaitOnLoad = false;
+            bunifuImageButton2.Zoom = 20;
+            bunifuImageButton2.ZoomSpeed = 10;
+            // 
+            // bunifuImageButton1
+            // 
+            bunifuImageButton1.ActiveImage = null;
+            bunifuImageButton1.AllowAnimations = true;
+            bunifuImageButton1.AllowBuffering = false;
+            bunifuImageButton1.AllowToggling = false;
+            bunifuImageButton1.AllowZooming = true;
+            bunifuImageButton1.AllowZoomingOnFocus = false;
+            bunifuImageButton1.BackColor = Color.Transparent;
+            bunifuImageButton1.BackgroundImage = (Image)resources.GetObject("bunifuImageButton1.BackgroundImage");
+            bunifuImageButton1.BackgroundImageLayout = ImageLayout.Center;
+            bunifuImageButton1.DialogResult = DialogResult.None;
+            bunifuImageButton1.ErrorImage = (Image)resources.GetObject("bunifuImageButton1.ErrorImage");
+            bunifuImageButton1.FadeWhenInactive = false;
+            bunifuImageButton1.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            bunifuImageButton1.Image = (Image)resources.GetObject("bunifuImageButton1.Image");
+            bunifuImageButton1.ImageActive = null;
+            bunifuImageButton1.ImageLocation = null;
+            bunifuImageButton1.ImageMargin = 20;
+            bunifuImageButton1.ImageSize = new Size(20, 20);
+            bunifuImageButton1.ImageZoomSize = new Size(40, 40);
+            bunifuImageButton1.InitialImage = (Image)resources.GetObject("bunifuImageButton1.InitialImage");
+            bunifuImageButton1.Location = new Point(53, 8);
+            bunifuImageButton1.Name = "bunifuImageButton1";
+            bunifuImageButton1.Rotation = 0;
+            bunifuImageButton1.ShowActiveImage = true;
+            bunifuImageButton1.ShowCursorChanges = true;
+            bunifuImageButton1.ShowImageBorders = true;
+            bunifuImageButton1.ShowSizeMarkers = false;
+            bunifuImageButton1.Size = new Size(40, 40);
+            bunifuImageButton1.TabIndex = 2;
+            bunifuImageButton1.ToolTipText = "";
+            bunifuImageButton1.WaitOnLoad = false;
+            bunifuImageButton1.Zoom = 20;
+            bunifuImageButton1.ZoomSpeed = 10;
+            // 
+            // bunifuhSlider1
+            // 
+            bunifuhSlider1.AllowCursorChanges = true;
+            bunifuhSlider1.AllowHomeEndKeysDetection = false;
+            bunifuhSlider1.AllowIncrementalClickMoves = true;
+            bunifuhSlider1.AllowMouseDownEffects = false;
+            bunifuhSlider1.AllowMouseHoverEffects = false;
+            bunifuhSlider1.AllowScrollingAnimations = true;
+            bunifuhSlider1.AllowScrollKeysDetection = true;
+            bunifuhSlider1.AllowScrollOptionsMenu = true;
+            bunifuhSlider1.AllowShrinkingOnFocusLost = false;
+            bunifuhSlider1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            bunifuhSlider1.BackColor = Color.Transparent;
+            bunifuhSlider1.BackgroundImage = (Image)resources.GetObject("bunifuhSlider1.BackgroundImage");
+            bunifuhSlider1.BindingContainer = null;
+            bunifuhSlider1.BorderRadius = 2;
+            bunifuhSlider1.BorderThickness = 1;
+            bunifuhSlider1.DrawThickBorder = false;
+            bunifuhSlider1.DurationBeforeShrink = 2000;
+            bunifuhSlider1.ElapsedColor = Color.DodgerBlue;
+            bunifuhSlider1.LargeChange = 10;
+            bunifuhSlider1.Location = new Point(214, 14);
+            bunifuhSlider1.Maximum = 100;
+            bunifuhSlider1.Minimum = 0;
+            bunifuhSlider1.MinimumSize = new Size(0, 31);
+            bunifuhSlider1.MinimumThumbLength = 18;
+            bunifuhSlider1.Name = "bunifuhSlider1";
+            bunifuhSlider1.OnDisable.ScrollBarBorderColor = Color.Silver;
+            bunifuhSlider1.OnDisable.ScrollBarColor = Color.Transparent;
+            bunifuhSlider1.OnDisable.ThumbColor = Color.Silver;
+            bunifuhSlider1.ScrollBarBorderColor = Color.FromArgb(210, 232, 255);
+            bunifuhSlider1.ScrollBarColor = Color.FromArgb(210, 232, 255);
+            bunifuhSlider1.ShrinkSizeLimit = 3;
+            bunifuhSlider1.Size = new Size(436, 31);
+            bunifuhSlider1.SliderColor = Color.FromArgb(210, 232, 255);
+            bunifuhSlider1.SliderStyle = Bunifu.UI.WinForms.BunifuHSlider.SliderStyles.Thin;
+            bunifuhSlider1.SliderThumbStyle = Utilities.BunifuSlider.BunifuHScrollBar.SliderThumbStyles.Circular;
+            bunifuhSlider1.SmallChange = 1;
+            bunifuhSlider1.TabIndex = 0;
+            bunifuhSlider1.ThumbColor = Color.DodgerBlue;
+            bunifuhSlider1.ThumbFillColor = SystemColors.Control;
+            bunifuhSlider1.ThumbLength = 43;
+            bunifuhSlider1.ThumbMargin = 1;
+            bunifuhSlider1.ThumbSize = Bunifu.UI.WinForms.BunifuHSlider.ThumbSizes.Medium;
+            bunifuhSlider1.ThumbStyle = Bunifu.UI.WinForms.BunifuHSlider.ThumbStyles.Outline;
+            bunifuhSlider1.Value = 50;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -762,6 +836,8 @@ namespace PlayListWindow
             PnlHeadbar.PerformLayout();
             bunifuPages1.ResumeLayout(false);
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -794,5 +870,8 @@ namespace PlayListWindow
         private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton3;
         private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton2;
         private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton1;
+        private PictureBox pictureBox1;
+        private Bunifu.UI.WinForms.BunifuHSlider bunifuhSlider2;
+        private PictureBox pictureBox2;
     }
 }
