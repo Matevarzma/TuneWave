@@ -20,4 +20,9 @@ public partial class Form1 : Form
         indicator.Top = ExploreButton.Top;
         bunifuPages1.SetPage(0);
     }
+
+    private void ExitBtn_Click(object sender, EventArgs e)
+    {
+        Environment.Exit(0);
+    }
 }
