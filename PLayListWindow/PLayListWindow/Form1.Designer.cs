@@ -503,10 +503,10 @@ namespace PlayListWindow
             bunifuPages1.Margin = new Padding(3, 2, 3, 2);
             bunifuPages1.Multiline = true;
             bunifuPages1.Name = "bunifuPages1";
-            bunifuPages1.Page = tabPage1;
-            bunifuPages1.PageIndex = 1;
-            bunifuPages1.PageName = "tabPage1";
-            bunifuPages1.PageTitle = "Explore";
+            bunifuPages1.Page = tabPage2;
+            bunifuPages1.PageIndex = 0;
+            bunifuPages1.PageName = "tabPage2";
+            bunifuPages1.PageTitle = "Playing";
             bunifuPages1.SelectedIndex = 0;
             bunifuPages1.Size = new Size(927, 589);
             bunifuPages1.TabIndex = 1;
@@ -578,9 +578,9 @@ namespace PlayListWindow
             ListOfSongs.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ListOfSongs.FormattingEnabled = true;
             ListOfSongs.ItemHeight = 15;
-            ListOfSongs.Location = new Point(11, 58);
+            ListOfSongs.Location = new Point(321, 55);
             ListOfSongs.Name = "ListOfSongs";
-            ListOfSongs.Size = new Size(902, 274);
+            ListOfSongs.Size = new Size(297, 349);
             ListOfSongs.TabIndex = 7;
             // 
             // ImportMusicButton
@@ -737,6 +737,7 @@ namespace PlayListWindow
             bunifuImageButton4.WaitOnLoad = false;
             bunifuImageButton4.Zoom = 20;
             bunifuImageButton4.ZoomSpeed = 10;
+            bunifuImageButton4.Click += bunifuImageButton4_Click;
             // 
             // bunifuImageButton3
             // 
@@ -773,6 +774,7 @@ namespace PlayListWindow
             bunifuImageButton3.WaitOnLoad = false;
             bunifuImageButton3.Zoom = 20;
             bunifuImageButton3.ZoomSpeed = 10;
+            bunifuImageButton3.Click += bunifuImageButton3_Click;
             // 
             // bunifuImageButton2
             // 
@@ -845,6 +847,7 @@ namespace PlayListWindow
             bunifuImageButton1.WaitOnLoad = false;
             bunifuImageButton1.Zoom = 20;
             bunifuImageButton1.ZoomSpeed = 10;
+            bunifuImageButton1.Click += bunifuImageButton1_Click;
             // 
             // bunifuhSlider1
             // 

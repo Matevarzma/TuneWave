@@ -1,13 +1,17 @@
 using System.Drawing;
+using System.Drawing.Text;
+using System.Security.Cryptography.X509Certificates;
 
 namespace PlayListWindow;
 public partial class Form1 : Form
 {
 
-
+    
     public Form1()
     {
         InitializeComponent();
+
+
 
 
     }
@@ -46,7 +50,24 @@ public partial class Form1 : Form
             for (int i = 0; i < files.Length; i++)
             {
                 ListOfSongs.Items.Add(files[i]);
+
             }
         }
+
+    }
+
+    private void bunifuImageButton1_Click(object sender, EventArgs e)
+    {
+       
+    }
+
+    private void bunifuImageButton3_Click(object sender, EventArgs e)
+    {
+        
+    }
+
+    private void bunifuImageButton4_Click(object sender, EventArgs e)
+    {
+
     }
 }
