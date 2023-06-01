@@ -32,7 +32,7 @@ namespace PlayListWindow
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation2 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
             PnlleftBar = new Panel();
             indicator = new Bunifu.UI.WinForms.BunifuShapes();
             HelpButton = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -510,22 +510,22 @@ namespace PlayListWindow
             bunifuPages1.SelectedIndex = 0;
             bunifuPages1.Size = new Size(927, 589);
             bunifuPages1.TabIndex = 1;
-            animation2.AnimateOnlyDifferences = false;
-            animation2.BlindCoeff = (PointF)resources.GetObject("animation2.BlindCoeff");
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = (PointF)resources.GetObject("animation2.MosaicCoeff");
-            animation2.MosaicShift = (PointF)resources.GetObject("animation2.MosaicShift");
-            animation2.MosaicSize = 0;
-            animation2.Padding = new Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = (PointF)resources.GetObject("animation2.ScaleCoeff");
-            animation2.SlideCoeff = (PointF)resources.GetObject("animation2.SlideCoeff");
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            bunifuPages1.Transition = animation2;
+            animation1.AnimateOnlyDifferences = false;
+            animation1.BlindCoeff = (PointF)resources.GetObject("animation1.BlindCoeff");
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = (PointF)resources.GetObject("animation1.MosaicCoeff");
+            animation1.MosaicShift = (PointF)resources.GetObject("animation1.MosaicShift");
+            animation1.MosaicSize = 0;
+            animation1.Padding = new Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = (PointF)resources.GetObject("animation1.ScaleCoeff");
+            animation1.SlideCoeff = (PointF)resources.GetObject("animation1.SlideCoeff");
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            bunifuPages1.Transition = animation1;
             bunifuPages1.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
             // 
             // tabPage2
@@ -586,7 +586,7 @@ namespace PlayListWindow
             // ImportMusicButton
             // 
             ImportMusicButton.Active = false;
-            ImportMusicButton.Activecolor = Color.FromArgb(46, 139, 87);
+            ImportMusicButton.Activecolor = Color.White;
             ImportMusicButton.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ImportMusicButton.BackColor = Color.White;
             ImportMusicButton.BackgroundImage = (Image)resources.GetObject("ImportMusicButton.BackgroundImage");
@@ -609,8 +609,8 @@ namespace PlayListWindow
             ImportMusicButton.Location = new Point(318, 468);
             ImportMusicButton.Margin = new Padding(4, 3, 4, 3);
             ImportMusicButton.Name = "ImportMusicButton";
-            ImportMusicButton.Normalcolor = Color.FromArgb(46, 139, 87);
-            ImportMusicButton.OnHovercolor = Color.FromArgb(36, 129, 77);
+            ImportMusicButton.Normalcolor = Color.White;
+            ImportMusicButton.OnHovercolor = Color.White;
             ImportMusicButton.OnHoverTextColor = Color.White;
             ImportMusicButton.selected = false;
             ImportMusicButton.Size = new Size(305, 71);
