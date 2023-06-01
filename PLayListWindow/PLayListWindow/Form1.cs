@@ -42,6 +42,11 @@ public partial class Form1 : Form
         {
             paths = ofd.FileNames;
             files = ofd.SafeFileNames;
+
+            for (int i = 0; i < files.Length; i++)
+            {
+                SongsList.Items.Add(files[i]);
+            }
         }
     }
 }

@@ -54,6 +54,7 @@ namespace PlayListWindow
             panel2 = new Panel();
             soundwavePic = new PictureBox();
             tabPage1 = new TabPage();
+            SongsList = new ListBox();
             ImportMusicButton = new Bunifu.Framework.UI.BunifuFlatButton();
             panel1 = new Panel();
             pictureBox2 = new PictureBox();
@@ -64,7 +65,6 @@ namespace PlayListWindow
             bunifuImageButton2 = new Bunifu.UI.WinForms.BunifuImageButton();
             bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
             bunifuhSlider1 = new Bunifu.UI.WinForms.BunifuHSlider();
-            listBox1 = new ListBox();
             PnlleftBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PFPpic).BeginInit();
             PnlHeadbar.SuspendLayout();
@@ -503,10 +503,10 @@ namespace PlayListWindow
             bunifuPages1.Margin = new Padding(3, 2, 3, 2);
             bunifuPages1.Multiline = true;
             bunifuPages1.Name = "bunifuPages1";
-            bunifuPages1.Page = tabPage2;
-            bunifuPages1.PageIndex = 0;
-            bunifuPages1.PageName = "tabPage2";
-            bunifuPages1.PageTitle = "Playing";
+            bunifuPages1.Page = tabPage1;
+            bunifuPages1.PageIndex = 1;
+            bunifuPages1.PageName = "tabPage1";
+            bunifuPages1.PageTitle = "Explore";
             bunifuPages1.SelectedIndex = 0;
             bunifuPages1.Size = new Size(927, 589);
             bunifuPages1.TabIndex = 1;
@@ -562,7 +562,7 @@ namespace PlayListWindow
             // 
             // tabPage1
             // 
-            tabPage1.Controls.Add(listBox1);
+            tabPage1.Controls.Add(SongsList);
             tabPage1.Controls.Add(ImportMusicButton);
             tabPage1.Location = new Point(4, 4);
             tabPage1.Margin = new Padding(3, 2, 3, 2);
@@ -573,12 +573,21 @@ namespace PlayListWindow
             tabPage1.Text = "Explore";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // SongsList
+            // 
+            SongsList.FormattingEnabled = true;
+            SongsList.ItemHeight = 15;
+            SongsList.Location = new Point(11, 58);
+            SongsList.Name = "SongsList";
+            SongsList.Size = new Size(902, 274);
+            SongsList.TabIndex = 7;
+            // 
             // ImportMusicButton
             // 
             ImportMusicButton.Active = false;
             ImportMusicButton.Activecolor = Color.FromArgb(46, 139, 87);
             ImportMusicButton.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            ImportMusicButton.BackColor = Color.FromArgb(46, 139, 87);
+            ImportMusicButton.BackColor = Color.White;
             ImportMusicButton.BackgroundImage = (Image)resources.GetObject("ImportMusicButton.BackgroundImage");
             ImportMusicButton.BackgroundImageLayout = ImageLayout.Stretch;
             ImportMusicButton.BorderRadius = 0;
@@ -883,15 +892,6 @@ namespace PlayListWindow
             bunifuhSlider1.ThumbStyle = Bunifu.UI.WinForms.BunifuHSlider.ThumbStyles.Outline;
             bunifuhSlider1.Value = 50;
             // 
-            // listBox1
-            // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(11, 58);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(902, 274);
-            listBox1.TabIndex = 7;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -957,6 +957,6 @@ namespace PlayListWindow
         private PictureBox soundwavePic;
         private Panel panel2;
         private Bunifu.Framework.UI.BunifuFlatButton ImportMusicButton;
-        private ListBox listBox1;
+        private ListBox SongsList;
     }
 }
