@@ -32,7 +32,7 @@ namespace PlayListWindow
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation2 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
             PnlleftBar = new Panel();
             indicator = new Bunifu.UI.WinForms.BunifuShapes();
             HelpButton = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -54,7 +54,7 @@ namespace PlayListWindow
             panel2 = new Panel();
             soundwavePic = new PictureBox();
             tabPage1 = new TabPage();
-            SongsList = new ListBox();
+            ListOfSongs = new ListBox();
             ImportMusicButton = new Bunifu.Framework.UI.BunifuFlatButton();
             panel1 = new Panel();
             pictureBox2 = new PictureBox();
@@ -510,22 +510,22 @@ namespace PlayListWindow
             bunifuPages1.SelectedIndex = 0;
             bunifuPages1.Size = new Size(927, 589);
             bunifuPages1.TabIndex = 1;
-            animation1.AnimateOnlyDifferences = false;
-            animation1.BlindCoeff = (PointF)resources.GetObject("animation1.BlindCoeff");
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = (PointF)resources.GetObject("animation1.MosaicCoeff");
-            animation1.MosaicShift = (PointF)resources.GetObject("animation1.MosaicShift");
-            animation1.MosaicSize = 0;
-            animation1.Padding = new Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = (PointF)resources.GetObject("animation1.ScaleCoeff");
-            animation1.SlideCoeff = (PointF)resources.GetObject("animation1.SlideCoeff");
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            bunifuPages1.Transition = animation1;
+            animation2.AnimateOnlyDifferences = false;
+            animation2.BlindCoeff = (PointF)resources.GetObject("animation2.BlindCoeff");
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = (PointF)resources.GetObject("animation2.MosaicCoeff");
+            animation2.MosaicShift = (PointF)resources.GetObject("animation2.MosaicShift");
+            animation2.MosaicSize = 0;
+            animation2.Padding = new Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = (PointF)resources.GetObject("animation2.ScaleCoeff");
+            animation2.SlideCoeff = (PointF)resources.GetObject("animation2.SlideCoeff");
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            bunifuPages1.Transition = animation2;
             bunifuPages1.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
             // 
             // tabPage2
@@ -562,7 +562,7 @@ namespace PlayListWindow
             // 
             // tabPage1
             // 
-            tabPage1.Controls.Add(SongsList);
+            tabPage1.Controls.Add(ListOfSongs);
             tabPage1.Controls.Add(ImportMusicButton);
             tabPage1.Location = new Point(4, 4);
             tabPage1.Margin = new Padding(3, 2, 3, 2);
@@ -573,14 +573,15 @@ namespace PlayListWindow
             tabPage1.Text = "Explore";
             tabPage1.UseVisualStyleBackColor = true;
             // 
-            // SongsList
+            // ListOfSongs
             // 
-            SongsList.FormattingEnabled = true;
-            SongsList.ItemHeight = 15;
-            SongsList.Location = new Point(11, 58);
-            SongsList.Name = "SongsList";
-            SongsList.Size = new Size(902, 274);
-            SongsList.TabIndex = 7;
+            ListOfSongs.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ListOfSongs.FormattingEnabled = true;
+            ListOfSongs.ItemHeight = 15;
+            ListOfSongs.Location = new Point(11, 58);
+            ListOfSongs.Name = "ListOfSongs";
+            ListOfSongs.Size = new Size(902, 274);
+            ListOfSongs.TabIndex = 7;
             // 
             // ImportMusicButton
             // 
@@ -957,6 +958,6 @@ namespace PlayListWindow
         private PictureBox soundwavePic;
         private Panel panel2;
         private Bunifu.Framework.UI.BunifuFlatButton ImportMusicButton;
-        private ListBox SongsList;
+        private ListBox ListOfSongs;
     }
 }

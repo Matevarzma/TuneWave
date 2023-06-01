@@ -37,7 +37,7 @@ public partial class Form1 : Form
     private void ImportMusicButton_Click(object sender, EventArgs e)
     {
         OpenFileDialog ofd = new OpenFileDialog();
-
+        ofd.Multiselect = true;
         if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
         {
             paths = ofd.FileNames;
@@ -45,7 +45,7 @@ public partial class Form1 : Form
 
             for (int i = 0; i < files.Length; i++)
             {
-                SongsList.Items.Add(files[i]);
+                ListOfSongs.Items.Add(files[i]);
             }
         }
     }
