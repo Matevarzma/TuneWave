@@ -9,10 +9,35 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <COMReference Include="WMPLib">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>6bf52a50-394a-11d3-b153-00c04f79faa6</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Bunifu.UI.WinForms" Version="6.1.0" />
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.4" />
     <PackageReference Include="MaterialSkin" Version="0.2.1" />
+    <PackageReference Include="NAudio" Version="2.1.0" />
     <PackageReference Include="Syncfusion.Xamarin.Core" Version="21.2.6" />
+    <PackageReference Include="Tabulate.NET" Version="1.0.5" />
+    <PackageReference Include="Uno.UI" Version="4.8.39" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Bunifu.UI.WinForms">
+      <HintPath>bin\Debug\net6.0-windows\Bunifu.UI.WinForms.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>

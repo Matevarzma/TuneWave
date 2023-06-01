@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33717.318
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayListWindow", "PlayListWindow\PlayListWindow.csproj", "{0E370DFF-23C0-4A7B-BE49-7044870FC4AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayListWindow", "PlayListWindow\PlayListWindow.csproj", "{0E370DFF-23C0-4A7B-BE49-7044870FC4AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{224B77E2-9ACA-4BBF-A4E1-9BD995220518}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

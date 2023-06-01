@@ -16,6 +16,7 @@
       "C:\\Users\\MARI\\.nuget\\packages"
     ],
     "configProperties": {
+      "Windows.ApplicationModel.DataTransfer.DragDrop.ExternalSupport": true,
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
     }
   }

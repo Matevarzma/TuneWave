@@ -1,5 +1,6 @@
 using MaterialSkin.Controls;
 
+
 namespace PlayListWindow
 {
     internal static class Program

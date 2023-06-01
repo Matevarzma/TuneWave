@@ -51,15 +51,10 @@ namespace PlayListWindow
             ExitBtn = new Bunifu.UI.WinForms.BunifuImageButton();
             bunifuPages1 = new Bunifu.UI.WinForms.BunifuPages();
             tabPage2 = new TabPage();
-            lblauthor = new Label();
-            label7 = new Label();
-            lblgenre = new Label();
-            label5 = new Label();
-            lbltitle = new Label();
-            bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            pictureBox3 = new PictureBox();
-            label2 = new Label();
+            panel2 = new Panel();
+            soundwavePic = new PictureBox();
             tabPage1 = new TabPage();
+            ImportMusicButton = new Bunifu.Framework.UI.BunifuFlatButton();
             panel1 = new Panel();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
@@ -69,14 +64,15 @@ namespace PlayListWindow
             bunifuImageButton2 = new Bunifu.UI.WinForms.BunifuImageButton();
             bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
             bunifuhSlider1 = new Bunifu.UI.WinForms.BunifuHSlider();
-            panel2 = new Panel();
+            listBox1 = new ListBox();
             PnlleftBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PFPpic).BeginInit();
             PnlHeadbar.SuspendLayout();
             bunifuPages1.SuspendLayout();
             tabPage2.SuspendLayout();
-            bunifuPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)soundwavePic).BeginInit();
+            tabPage1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -534,13 +530,6 @@ namespace PlayListWindow
             // 
             // tabPage2
             // 
-            tabPage2.Controls.Add(lblauthor);
-            tabPage2.Controls.Add(label7);
-            tabPage2.Controls.Add(lblgenre);
-            tabPage2.Controls.Add(label5);
-            tabPage2.Controls.Add(lbltitle);
-            tabPage2.Controls.Add(bunifuPanel1);
-            tabPage2.Controls.Add(label2);
             tabPage2.Controls.Add(panel2);
             tabPage2.Location = new Point(4, 4);
             tabPage2.Margin = new Padding(3, 2, 3, 2);
@@ -551,96 +540,30 @@ namespace PlayListWindow
             tabPage2.Text = "Playing";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // lblauthor
+            // panel2
             // 
-            lblauthor.AutoSize = true;
-            lblauthor.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblauthor.ForeColor = SystemColors.ControlDarkDark;
-            lblauthor.Location = new Point(333, 310);
-            lblauthor.Name = "lblauthor";
-            lblauthor.Size = new Size(58, 21);
-            lblauthor.TabIndex = 9;
-            lblauthor.Text = "author";
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel2.BackColor = Color.White;
+            panel2.Controls.Add(soundwavePic);
+            panel2.Location = new Point(178, 131);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(507, 309);
+            panel2.TabIndex = 10;
             // 
-            // label7
+            // soundwavePic
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(333, 270);
-            label7.Name = "label7";
-            label7.Size = new Size(83, 30);
-            label7.TabIndex = 8;
-            label7.Text = "Author";
-            // 
-            // lblgenre
-            // 
-            lblgenre.AutoSize = true;
-            lblgenre.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblgenre.ForeColor = SystemColors.ControlDarkDark;
-            lblgenre.Location = new Point(333, 216);
-            lblgenre.Name = "lblgenre";
-            lblgenre.Size = new Size(53, 21);
-            lblgenre.TabIndex = 7;
-            lblgenre.Text = "genre";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(333, 176);
-            label5.Name = "label5";
-            label5.Size = new Size(73, 30);
-            label5.TabIndex = 6;
-            label5.Text = "Genre";
-            // 
-            // lbltitle
-            // 
-            lbltitle.AutoSize = true;
-            lbltitle.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lbltitle.ForeColor = SystemColors.ControlDarkDark;
-            lbltitle.Location = new Point(333, 128);
-            lbltitle.Name = "lbltitle";
-            lbltitle.Size = new Size(42, 21);
-            lbltitle.TabIndex = 5;
-            lbltitle.Text = "Title";
-            // 
-            // bunifuPanel1
-            // 
-            bunifuPanel1.BackgroundColor = Color.White;
-            bunifuPanel1.BackgroundImage = (Image)resources.GetObject("bunifuPanel1.BackgroundImage");
-            bunifuPanel1.BackgroundImageLayout = ImageLayout.Stretch;
-            bunifuPanel1.BorderColor = Color.White;
-            bunifuPanel1.BorderRadius = 0;
-            bunifuPanel1.BorderThickness = 0;
-            bunifuPanel1.Controls.Add(pictureBox3);
-            bunifuPanel1.Location = new Point(25, 122);
-            bunifuPanel1.Name = "bunifuPanel1";
-            bunifuPanel1.ShowBorders = false;
-            bunifuPanel1.Size = new Size(273, 132);
-            bunifuPanel1.TabIndex = 4;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(-11, -18);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(294, 177);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 0;
-            pictureBox3.TabStop = false;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(333, 88);
-            label2.Name = "label2";
-            label2.Size = new Size(120, 30);
-            label2.TabIndex = 3;
-            label2.Text = "Song Title ";
+            soundwavePic.Image = (Image)resources.GetObject("soundwavePic.Image");
+            soundwavePic.Location = new Point(30, 23);
+            soundwavePic.Name = "soundwavePic";
+            soundwavePic.Size = new Size(452, 255);
+            soundwavePic.SizeMode = PictureBoxSizeMode.Zoom;
+            soundwavePic.TabIndex = 0;
+            soundwavePic.TabStop = false;
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(listBox1);
+            tabPage1.Controls.Add(ImportMusicButton);
             tabPage1.Location = new Point(4, 4);
             tabPage1.Margin = new Padding(3, 2, 3, 2);
             tabPage1.Name = "tabPage1";
@@ -649,6 +572,43 @@ namespace PlayListWindow
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Explore";
             tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // ImportMusicButton
+            // 
+            ImportMusicButton.Active = false;
+            ImportMusicButton.Activecolor = Color.FromArgb(46, 139, 87);
+            ImportMusicButton.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ImportMusicButton.BackColor = Color.FromArgb(46, 139, 87);
+            ImportMusicButton.BackgroundImage = (Image)resources.GetObject("ImportMusicButton.BackgroundImage");
+            ImportMusicButton.BackgroundImageLayout = ImageLayout.Stretch;
+            ImportMusicButton.BorderRadius = 0;
+            ImportMusicButton.ButtonText = "";
+            ImportMusicButton.DisabledColor = Color.Gray;
+            ImportMusicButton.Iconcolor = Color.Transparent;
+            ImportMusicButton.Iconimage = null;
+            ImportMusicButton.Iconimage_right = null;
+            ImportMusicButton.Iconimage_right_Selected = null;
+            ImportMusicButton.Iconimage_Selected = null;
+            ImportMusicButton.IconMarginLeft = 0;
+            ImportMusicButton.IconMarginRight = 0;
+            ImportMusicButton.IconRightVisible = false;
+            ImportMusicButton.IconRightZoom = 0D;
+            ImportMusicButton.IconVisible = false;
+            ImportMusicButton.IconZoom = 90D;
+            ImportMusicButton.IsTab = false;
+            ImportMusicButton.Location = new Point(318, 468);
+            ImportMusicButton.Margin = new Padding(4, 3, 4, 3);
+            ImportMusicButton.Name = "ImportMusicButton";
+            ImportMusicButton.Normalcolor = Color.FromArgb(46, 139, 87);
+            ImportMusicButton.OnHovercolor = Color.FromArgb(36, 129, 77);
+            ImportMusicButton.OnHoverTextColor = Color.White;
+            ImportMusicButton.selected = false;
+            ImportMusicButton.Size = new Size(305, 71);
+            ImportMusicButton.TabIndex = 6;
+            ImportMusicButton.TextAlign = ContentAlignment.MiddleLeft;
+            ImportMusicButton.Textcolor = Color.White;
+            ImportMusicButton.TextFont = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            ImportMusicButton.Click += ImportMusicButton_Click;
             // 
             // panel1
             // 
@@ -923,13 +883,14 @@ namespace PlayListWindow
             bunifuhSlider1.ThumbStyle = Bunifu.UI.WinForms.BunifuHSlider.ThumbStyles.Outline;
             bunifuhSlider1.Value = 50;
             // 
-            // panel2
+            // listBox1
             // 
-            panel2.BackColor = Color.White;
-            panel2.Location = new Point(11, 87);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(297, 211);
-            panel2.TabIndex = 10;
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 15;
+            listBox1.Location = new Point(11, 58);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(902, 274);
+            listBox1.TabIndex = 7;
             // 
             // Form1
             // 
@@ -952,9 +913,9 @@ namespace PlayListWindow
             PnlHeadbar.PerformLayout();
             bunifuPages1.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
-            tabPage2.PerformLayout();
-            bunifuPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)soundwavePic).EndInit();
+            tabPage1.ResumeLayout(false);
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -993,14 +954,9 @@ namespace PlayListWindow
         private PictureBox pictureBox1;
         private Bunifu.UI.WinForms.BunifuHSlider bunifuhSlider2;
         private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
-        private Label label2;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
-        private Label lblauthor;
-        private Label label7;
-        private Label lblgenre;
-        private Label label5;
-        private Label lbltitle;
+        private PictureBox soundwavePic;
         private Panel panel2;
+        private Bunifu.Framework.UI.BunifuFlatButton ImportMusicButton;
+        private ListBox listBox1;
     }
 }
